@@ -221,7 +221,7 @@ export default function ProjectsSection() {
                 rel="noopener noreferrer"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 cursor-pointer"
               >
-                WhatsApp'tan Yaz
+                WhatsApp&apos;tan Yaz
               </a>
             </div>
           </div>
