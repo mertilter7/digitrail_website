@@ -1,0 +1,157 @@
+"use client";
+
+import { Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+
+export default function AboutSection() {
+  return (
+    <section id="about" className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium mb-6">
+            <Users className="w-4 h-4 mr-2" />
+            Hakkımızda
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Güvenilir Teknoloji
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Partneriniz</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Digitrail olarak 7 yıldır profesyonel sektör deneyimi ile büyük ölçekli banka, kurum, 
+            kuruluş ve özel şirketlerin yazılım projelerini hayata geçiriyoruz.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Left Side - Company Story */}
+          <div className="space-y-8">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center text-white mr-3">
+                  <TrendingUp className="w-6 h-6" />
+                </div>
+                Deneyim & Uzmanlık
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">7 Yıllık Sektör Deneyimi</h4>
+                    <p className="text-gray-600 text-sm">Bankacılık, finans ve kurumsal yazılım projelerinde uzmanlaşmış ekibimiz</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Büyük Ölçekli Projeler</h4>
+                    <p className="text-gray-600 text-sm">Banka, kurum ve kuruluşların karmaşık yazılım ihtiyaçlarını karşılıyoruz</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Kapsamlı Hizmet Yelpazesi</h4>
+                    <p className="text-gray-600 text-sm">Yazılım geliştirmeden sosyal medya yönetimine kadar tüm dijital ihtiyaçlar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Services & Stats */}
+          <div className="space-y-6">
+            {/* Services Overview */}
+            <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-6 text-center">Hizmet Alanlarımız</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white/10 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold mb-1">💻</div>
+                    <div className="text-sm">Yazılım Geliştirme</div>
+                  </div>
+                  <div className="bg-white/10 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold mb-1">📱</div>
+                    <div className="text-sm">Sosyal Medya</div>
+                  </div>
+                  <div className="bg-white/10 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold mb-1">🎯</div>
+                    <div className="text-sm">Dijital Pazarlama</div>
+                  </div>
+                  <div className="bg-white/10 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold mb-1">🏢</div>
+                    <div className="text-sm">Kurumsal Çözümler</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Company Stats */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Rakamlarla Digitrail</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-1">7+</div>
+                  <div className="text-sm text-gray-600">Yıl Deneyim</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-600 mb-1">100+</div>
+                  <div className="text-sm text-gray-600">Tamamlanan Proje</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-indigo-600 mb-1">50+</div>
+                  <div className="text-sm text-gray-600">Mutlu Müşteri</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-1">24/7</div>
+                  <div className="text-sm text-gray-600">Destek</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center">
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">
+            Projelerinizi Hayata Geçirelim
+          </h3>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Deneyimli ekibimiz ile yazılım projelerinizi, sosyal medya yönetiminizi ve 
+            dijital pazarlama ihtiyaçlarınızı profesyonel bir şekilde karşılayalım.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://wa.me/905455620432" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center cursor-pointer"
+            >
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Hemen İletişime Geç
+            </a>
+            <button 
+              onClick={() => document.getElementById('solutions').scrollIntoView({ behavior: 'smooth' })}
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 cursor-pointer"
+            >
+              Çözümlerimizi İncele
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+} 
