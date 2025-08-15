@@ -1,219 +1,353 @@
 "use client";
 
-import { Check, X } from 'lucide-react';
+import { useState } from 'react';
+import { Check, Star, Zap, Crown, Shield, Users, BarChart3, Wrench, Car, Package, CreditCard, Calendar, MessageCircle, TrendingUp, FileText, Printer } from 'lucide-react';
 
 export default function PricingSection() {
+  const [billingCycle, setBillingCycle] = useState('monthly');
+
   const plans = [
     {
       name: "Standart",
-      price: "₺599",
-      originalPrice: "₺799",
-      period: "/ay",
-      description: "Küçük oto servisler için ideal başlangıç paketi",
+      icon: <Shield className="w-8 h-8" />,
+      description: "Küçük oto servisler için temel ihtiyaçlar",
+      price: billingCycle === 'monthly' ? '₺799' : '₺8,500',
+      originalPrice: billingCycle === 'monthly' ? '₺999' : '₺9,500',
       features: [
         "Dashboard & Analitik",
-        "Müşteri Yönetimi",
         "Servis Yönetimi",
-        "Arıza Kayıtları",
+        "Arıza Yönetimi",
+        "Müşteri Yönetimi",
+        "Tedarikçi Yönetimi",
         "Envanter Yönetimi",
-        "Kullanıcı Yönetimi",
-        "Temel Raporlama",
-        "15 Günlük Teknik Destek"
+        "Randevu Yönetimi",
+        "Eğitim Desteği",
+        "Kurulum Desteği",
       ],
       notIncluded: [
-        "Takvim Sistemi",
+        "Anlaşma Yönetimi",
         "Personel Yönetimi",
-        "Gelir & Gider Takibi",
-        "Bilanço & Raporlama",
-        "Notlar & Hatırlatmalar",
-        "Tedarikçi Yönetimi",
-        "Lastik Deposu (Oteli)",
+        "Lastik Oteli",
+        "Gider Yönetimi",
+        "Kullanıcı Yönetimi",
+        "Yazıcı Çıktısı",
+        "7/24 Destek",
+        "Not Yönetimi (Gelişmiş)",
+        "Özel Geliştirmeler",
+        "Özel Entegrasyonlar (isteğe bağlı özel)",
+        "Öncelikli Destek",
+        "Özel Eğitim"
       ],
+      limitations: [],
       popular: false,
       color: "from-gray-600 to-gray-700"
     },
     {
       name: "Pro",
-      price: "₺799",
-      originalPrice: "₺1099",
-      period: "/ay",
-      description: "Orta ölçekli servisler için kapsamlı çözüm",
+      icon: <Zap className="w-8 h-8" />,
+      description: "Orta ölçekli servisler için gelişmiş özellikler",
+      price: billingCycle === 'monthly' ? '₺1199' : '₺13,000',
+      originalPrice: billingCycle === 'monthly' ? '₺1399' : '₺14,388',
       features: [
-        "Dashboard & Analitik",
-        "Müşteri Yönetimi",
+        "Dashboard & Analitik (Gelişmiş)",
         "Servis Yönetimi",
-        "Arıza Kayıtları",
+        "Arıza Yönetimi",
+        "Müşteri Yönetimi",
         "Envanter Yönetimi",
-        "Fatura & Ödeme",
-        "Takvim Sistemi",
-        "Gelir & Gider Takibi",
         "Tedarikçi Yönetimi",
-        "Notlar & Hatırlatmalar",
-        "Kullanıcı Yönetimi",
-        "Bilanço & Raporlama",
-        "1 Ay Teknik Destek",
-        "Eğitim Desteği",
+        "Personel Yönetimi",
+        "Randevu Yönetimi",
+        "Gider Yönetimi",
+        "Not Yönetimi (Gelişmiş)",
+        "Yazıcı Çıktısı",
+        "3 Ay Teknik Destek",
+        "Kurulum Desteği",
+        "7/24 Destek",
       ],
       notIncluded: [
-        "Personel Yönetimi",
-        "Lastik Deposu (Oteli)",
+        "Kullanıcı Yönetimi",
+        "Lastik Oteli",
+        "Özel Geliştirmeler",
+        "Anlaşma Yönetimi",
+        "Özel Entegrasyonlar (isteğe bağlı özel)",
         "Öncelikli Destek",
-        "3 Ay Teknik Destek",
-        "Özel Kurulum Desteği",
-        "7/24 Acil Destek"
+        "Özel Eğitim"
       ],
+      limitations: [],
       popular: true,
       color: "from-blue-600 to-indigo-600"
     },
     {
-      name: "Business",
-      price: "₺1399",
-      originalPrice: "₺1599",
-      period: "/ay",
-      description: "Büyük servisler ve zincirler için tam çözüm",
+      name: "Premium",
+      icon: <Crown className="w-8 h-8" />,
+      description: "Büyük servisler ve şirketler için kurumsal çözümler",
+      price: billingCycle === 'monthly' ? '₺1,599' : '₺14,388',
+      originalPrice: billingCycle === 'monthly' ? '₺1,999' : '₺19,188',
       features: [
-        "Dashboard & Analitik",
+        "Dashboard & Analitik (Gelişmiş)",
         "Servis Yönetimi",
+        "Arıza Yönetimi",
         "Müşteri Yönetimi",
-        "Arıza Kayıtları",
         "Envanter Yönetimi",
-        "Fatura & Ödeme",
-        "Takvim Sistemi",
-        "Personel Yönetimi",
-        "Gelir & Gider Takibi",
         "Tedarikçi Yönetimi",
-        "Notlar & Hatırlatmalar",
-        "Kullanıcı Yönetimi",
-        "Bilanço & Raporlama",
-        "Lastik Deposu (Oteli)",
-        "Öncelikli Destek",
+        "Personel Yönetimi",
+        "Randevu Yönetimi",
+        "Gider Yönetimi",
+        "Not Yönetimi (Gelişmiş)",
+        "Yazıcı Çıktısı",
         "3 Ay Teknik Destek",
-        "Eğitim Desteği",
-        "Özel Kurulum Desteği",
-        "7/24 Acil Destek",
+        "Kurulum Desteği",
+        "7/24 Destek",
+        "Kullanıcı Yönetimi",
+        "Lastik Oteli",
+        "Anlaşma Yönetimi",
+        "Özel Entegrasyonlar (isteğe bağlı özel)",
+        "Öncelikli Destek",
+        "Özel Eğitim",
+        "Özel Geliştirmeler"
       ],
       notIncluded: [],
+      limitations: [
+      ],
       popular: false,
       color: "from-purple-600 to-pink-600"
     }
   ];
 
+  const modules = [
+    { name: "Dashboard & Analitik", icon: <BarChart3 className="w-5 h-5" /> },
+    { name: "Servis Yönetimi", icon: <Wrench className="w-5 h-5" /> },
+    { name: "Arıza Yönetimi", icon: <Shield className="w-5 h-5" /> },
+    { name: "Envanter Yönetimi", icon: <Package className="w-5 h-5" /> },
+    { name: "Müşteri Yönetimi", icon: <Car className="w-5 h-5" /> },
+    { name: "Tedarikçi Yönetimi", icon: <Package className="w-5 h-5" /> },
+    { name: "Anlaşma Yönetimi", icon: <Check className="w-5 h-5" /> },
+    { name: "Personel Yönetimi", icon: <Users className="w-5 h-5" /> },
+    { name: "Lastik Oteli", icon: <Package className="w-5 h-5" /> },
+    { name: "Not Yönetimi", icon: <FileText className="w-5 h-5" /> },
+    { name: "Randevu Yönetimi", icon: <Calendar className="w-5 h-5" /> },
+    { name: "Gider Yönetimi", icon: <TrendingUp className="w-5 h-5" /> },
+    { name: "Kullanıcı Yönetimi", icon: <Shield className="w-5 h-5" /> },
+    { name: "Yazıcı Çıktısı", icon: <Printer className="w-5 h-5" /> },
+  ];
+
   return (
-    <section id="pricing" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="pricing" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl xl:text-4xl font-bold text-gray-900 mb-4">
-            Size Uygun Paketi Seçin
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Sizin İhtiyacınıza Uygun Paket
           </h2>
-          <p className="xl:text-xl text-gray-600 max-w-3xl mx-auto">
-            İşletmenizin büyüklüğüne ve ihtiyaçlarına göre en uygun paketi seçin. 
-            Tüm paketler 19 modülümüzden oluşur ve teknik destek ile eğitim hizmetleri içerir.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Repavent&apos;in kapsamlı modüllerini işletmenizin büyüklüğüne göre seçin. 
+            Her paket, oto servisinizi dijitalleştirmek için gerekli araçları içerir.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-24 xl:gap-8">
+
+        {/* Billing Toggle */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-white rounded-lg p-1 shadow-lg">
+            <button
+              onClick={() => setBillingCycle('monthly')}
+              className={`px-6 py-2 rounded-md font-medium transition-all ${
+                billingCycle === 'monthly'
+                  ? 'bg-blue-600 text-white shadow-md'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Aylık
+            </button>
+            <button
+              onClick={() => setBillingCycle('yearly')}
+              className={`px-6 py-2 rounded-md font-medium transition-all ${
+                billingCycle === 'yearly'
+                  ? 'bg-blue-600 text-white shadow-md'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Yıllık
+              <span className="ml-2 text-sm bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                Özel İndirim
+              </span>
+            </button>
+          </div>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {plans.map((plan, index) => (
-            <div 
+            <div
               key={index}
-              className={`relative bg-white rounded-2xl border-2 p-8 ${
-                plan.popular 
-                  ? 'border-blue-500 shadow-2xl scale-105 bg-gradient-to-br from-white to-blue-50' 
-                  : plan.name === "Business"
-                  ? 'border-yellow-400 shadow-2xl scale-105 bg-gradient-to-br from-white to-yellow-50'
-                  : plan.name === "Standart"
-                  ? 'border-amber-600 shadow-2xl scale-105 bg-gradient-to-br from-amber-50 to-orange-50'
-                  : 'border-gray-200 hover:border-gray-300'
-              } transition-all duration-300`}
+              className={`relative rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:scale-105 ${
+                plan.popular ? 'ring-4 ring-blue-500 ring-opacity-50' : ''
+              } ${
+                plan.name === "Standart" ? 'bg-gray-50' :
+                plan.name === "Pro" ? 'bg-blue-50' :
+                plan.name === "Premium" ? 'bg-amber-50' : 'bg-white'
+              }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    🚀 EN POPÜLER
-                  </span>
+                <div className="absolute top-7 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                    En Popüler
+                  </div>
                 </div>
               )}
-              {plan.name === "Business" && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    ⭐ PREMIUM
-                  </span>
+
+              <div className={`bg-gradient-to-r ${plan.color} p-8 text-white`}>
+                <div className="flex items-center justify-between mb-4">
+                  {plan.icon}
+                  {plan.popular && <Star className="w-6 h-6 text-yellow-300" />}
                 </div>
-              )}
-              {plan.name === "Standart" && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    🏆 BAŞLANGIÇ
-                  </span>
-                </div>
-              )}
-              
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                {plan.originalPrice && (
-                  <div className="mb-2">
-                    <span className="text-lg text-red-500 line-through mr-2">{plan.originalPrice}</span>
-                    <span className="bg-red-100 text-red-600 px-2 py-1 rounded-full text-xs font-semibold">
-                      İNDİRİM
+                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                <p className="text-blue-100 text-sm">{plan.description}</p>
+              </div>
+
+              <div className="p-8">
+                <div className="mb-6">
+                  <div className="flex items-baseline">
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className="text-gray-500 ml-2">
+                      /{billingCycle === 'monthly' ? 'ay' : 'yıl'}
                     </span>
                   </div>
-                )}
-                <div className="flex items-baseline justify-center mb-4">
-                  <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                  <span className="text-gray-600 ml-1">{plan.period}</span>
-                </div>
-                <p className="text-gray-600">{plan.description}</p>
-              </div>
-              
-              <div className="space-y-4 mb-8">
-                <h4 className="font-semibold text-gray-900 mb-4">Dahil Olan Özellikler:</h4>
-                {plan.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              
-              {plan.notIncluded.length > 0 && (
-                <div className="space-y-4 mb-8">
-                  <h4 className="font-semibold text-gray-900 mb-4">Dahil Olmayan Özellikler:</h4>
-                  {plan.notIncluded.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center">
-                      <X className="w-5 h-5 text-gray-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-500 text-sm">{feature}</span>
+                  {plan.originalPrice && (
+                    <div className="flex items-center mt-2">
+                      <span className="text-lg text-gray-400 line-through mr-2">
+                        {plan.originalPrice}
+                      </span>
                     </div>
-                  ))}
+                  )}
                 </div>
-              )}
-              
-              <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 cursor-pointer ${
-                plan.popular
-                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg'
-                  : plan.name === "Business"
-                  ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-white hover:from-yellow-500 hover:to-yellow-700 shadow-lg'
-                  : plan.name === "Standart"
-                  ? 'bg-gradient-to-r from-amber-600 to-orange-600 text-white hover:from-amber-700 hover:to-orange-700 shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}>
-                {plan.popular ? '🚀 Pro Paket' : plan.name === "Business" ? '⭐ Premium Paket' : plan.name === "Standart" ? '🏆 Başlangıç Paketi' : 'Paketi Seç'}
-              </button>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {plan.notIncluded.length > 0 && (
+                  <div className="mb-6 p-4 bg-red-50 rounded-lg border border-red-200">
+                    <h4 className="text-sm font-medium text-red-700 mb-2">Bu Pakette Bulunmayan Özellikler:</h4>
+                    <ul className="space-y-1">
+                      {plan.notIncluded.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="text-xs text-red-600 flex items-center">
+                          <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}>
+                  {plan.name} Paketini Seç
+                </button>
+              </div>
             </div>
           ))}
         </div>
-        
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
-            Teknik destek ve eğitim hizmetleri paketlerinize dahildir.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://wa.me/905455620432" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 inline-block cursor-pointer"
-            >
-              İletişime Geç
-            </a>
+
+        {/* Module Comparison Table */}
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="p-8 border-b border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900">Modül Karşılaştırması</h3>
+            <p className="text-gray-600 mt-2">
+              Her pakette hangi modüllerin bulunduğunu detaylı olarak inceleyin
+            </p>
+          </div>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Modül</th>
+                  <th className="px-6 py-4 text-center text-sm font-medium text-gray-900">Standart</th>
+                  <th className="px-6 py-4 text-center text-sm font-medium text-gray-900">Pro</th>
+                  <th className="px-6 py-4 text-center text-sm font-medium text-gray-900">Business</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {modules.map((module, index) => {
+                  // Check if module is in each plan's features
+                  const inStandard = plans[0].features.some(feature => 
+                    feature.includes(module.name) || 
+                    (module.name === "Dashboard & Analitik" && feature.includes("Dashboard & Analitik"))
+                  );
+                  const inPro = plans[1].features.some(feature => 
+                    feature.includes(module.name) || 
+                    (module.name === "Dashboard & Analitik" && feature.includes("Dashboard & Analitik")) ||
+                    (module.name === "Not Yönetimi" && feature.includes("Not Yönetimi"))
+                  );
+                  const inPremium = plans[2].features.some(feature => 
+                    feature.includes(module.name) || 
+                    (module.name === "Dashboard & Analitik" && feature.includes("Dashboard & Analitik")) ||
+                    (module.name === "Not Yönetimi" && feature.includes("Not Yönetimi"))
+                  );
+
+                  return (
+                    <tr key={index} className="hover:bg-gray-50">
+                      <td className="px-6 py-4">
+                        <div className="flex items-center">
+                          {module.icon}
+                          <span className="ml-3 text-sm font-medium text-gray-900">{module.name}</span>
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {inStandard ? (
+                          <Check className="w-5 h-5 text-green-500 mx-auto" />
+                        ) : (
+                          <span className="text-gray-400">—</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {inPro ? (
+                          <Check className="w-5 h-5 text-green-500 mx-auto" />
+                        ) : (
+                          <span className="text-gray-400">—</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {inPremium ? (
+                          <Check className="w-5 h-5 text-green-500 mx-auto" />
+                        ) : (
+                          <span className="text-gray-500">—</span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Hangi Paket Size Uygun?</h3>
+            <p className="text-blue-100 mb-6">
+              Paket seçiminde yardıma mı ihtiyacınız var? Uzman ekibimiz size en uygun çözümü önersin.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://wa.me/905455620432" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 inline-flex items-center justify-center"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                WhatsApp&apos;tan Danışın
+              </a>
+            </div>
           </div>
         </div>
       </div>

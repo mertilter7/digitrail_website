@@ -1,6 +1,6 @@
 "use client";
 
-import { Code, Car, Smartphone, Monitor, Zap } from 'lucide-react';
+import { Code, Car, Smartphone, Monitor, Zap, Building2, Dumbbell } from 'lucide-react';
 
 export default function ProjectsSection() {
   const projects = [
@@ -13,23 +13,20 @@ export default function ProjectsSection() {
       bgGradient: "from-blue-50 via-purple-50 to-pink-50",
       features: [
         "Dashboard & Analitik",
-        "Servis Yönetimi", 
-        "Müşteri Yönetimi",
-        "Arıza Kayıtları",
+        "Servis Yönetimi",
+        "Arıza Yönetimi",
         "Envanter Yönetimi",
-        "Fatura & Ödeme",
-        "Takvim Sistemi",
-        "Personel Yönetimi",
-        "Gelir & Gider Takibi",
+        "Müşteri Yönetimi",
         "Tedarikçi Yönetimi",
-        "Notlar & Hatırlatmalar",
+        "Anlaşma Yönetimi",
+        "Personel Yönetimi",
+        "Lastik Oteli",
+        "Not Yönetimi",
+        "Randevu Yönetimi",
+        "Bildirim Sistemi",
+        "Gider Yönetimi",
         "Kullanıcı Yönetimi",
-        "Bilanço & Raporlama",
-        "Lastik Deposu (Oteli)",
-        "Öncelikli Destek",
-        "3 Ay Teknik Destek",
-        "Eğitim Desteği",
-        "Özel Kurulum Desteği",
+        "Yazıcı Çıktısı",
       ],
       status: "Tamamlandı"
     },
@@ -51,7 +48,7 @@ export default function ProjectsSection() {
       gradient: "from-orange-500 via-red-500 to-pink-500",
       bgGradient: "from-orange-50 via-red-50 to-pink-50",
       features: ["Teknik Destek", "Donanım Takibi", "Yazılım Kurulumu", "Bakım Planı"],
-      status: "Planlanıyor"
+      status: "Geliştiriliyor"
     },
     {
       id: 4,
@@ -62,6 +59,44 @@ export default function ProjectsSection() {
       bgGradient: "from-indigo-50 via-purple-50 to-pink-50",
       features: ["Özel Yazılım", "Web Uygulamaları", "Mobil Uygulamalar", "API Geliştirme"],
       status: "Sürekli"
+    },
+    {
+      id: 5,
+      title: "Gayrimenkul Portföy Yönetim Sistemi",
+      description: "Emlak danışmanları için kapsamlı portföy yönetimi ve müşteri takip sistemi",
+      icon: <Building2 className="w-12 h-12" />,
+      gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+      bgGradient: "from-emerald-50 via-teal-50 to-cyan-50",
+      features: [
+        "Portföy Yönetimi",
+        "Müşteri Yönetimi",
+        "Gayrimenkul Listesi",
+        "Randevu Sistemi",
+        "Arama & Filtreleme",
+        "Harita Entegrasyonu",
+        "Raporlama",
+        "Müşteri İletişim Geçmişi"
+      ],
+      status: "Planlanıyor"
+    },
+    {
+      id: 6,
+      title: "Fitness Salon Yönetim Sistemi",
+      description: "Fitness salonları için üye yönetimi, antrenman programları ve ödeme takibi",
+      icon: <Dumbbell className="w-12 h-12" />,
+      gradient: "from-violet-500 via-purple-500 to-indigo-500",
+      bgGradient: "from-violet-50 via-purple-50 to-indigo-50",
+      features: [
+        "Üye Yönetimi",
+        "Üyelik Paketleri",
+        "Antrenman Programları",
+        "Randevu Sistemi",
+        "Ödeme Takibi",
+        "Antrenör Yönetimi",
+        "Egzersiz Kütüphanesi",
+        "Raporlama"
+      ],
+      status: "Geliştiriliyor"
     }
   ];
 
@@ -80,7 +115,7 @@ export default function ProjectsSection() {
             Portföyümüz
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Tamamlanan
+            Tamamlanan & Geliştirilen
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Ürünlerimiz</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

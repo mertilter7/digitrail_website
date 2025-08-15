@@ -19,9 +19,9 @@ export default function ContactForm() {
 
   const packages = [
     { value: '', label: 'Paket Seçiniz' },
-    { value: 'standart', label: 'Standart Paket - ₺599/ay' },
-    { value: 'pro', label: 'Pro Paket - ₺799/ay' },
-    { value: 'business', label: 'Business Paket - ₺1399/ay' },
+    { value: 'standart', label: 'Standart Paket - ₺799/ay' },
+    { value: 'pro', label: 'Pro Paket - ₺1199/ay' },
+    { value: 'business', label: 'Business Paket - ₺1599/ay' },
     { value: 'lifetime', label: 'Sınırsız Erişim - Tek Seferlik Ödeme' },
     { value: 'partnership', label: 'Bayilik & Partnerlik' },
     { value: 'custom', label: 'Özel Yazılım Geliştirme' },
