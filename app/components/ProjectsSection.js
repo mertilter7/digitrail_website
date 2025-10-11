@@ -1,6 +1,6 @@
 "use client";
 
-import { Code, Car, Smartphone, Monitor, Zap, Building2, Dumbbell } from 'lucide-react';
+import { Code, Car, Zap, Building2 } from 'lucide-react';
 
 export default function ProjectsSection() {
   const projects = [
@@ -31,81 +31,47 @@ export default function ProjectsSection() {
       status: "Tamamlandı"
     },
     {
-      id: 2,
-      title: "Repavent Telefon Servis",
-      description: "Telefon servis yönetim platformu ile cihaz takibi ve müşteri iletişimi",
-      icon: <Smartphone className="w-12 h-12" />,
-      gradient: "from-green-500 via-emerald-500 to-teal-500",
-      bgGradient: "from-green-50 via-emerald-50 to-teal-50",
-      features: ["Cihaz Takibi", "Servis Durumu", "Müşteri Bildirimleri", "Parça Yönetimi"],
-      status: "Geliştiriliyor"
-    },
-    {
-      id: 3,
-      title: "Repavent Bilgisayar Servis",
-      description: "Bilgisayar servis yönetim sistemi ile teknik destek ve donanım takibi",
-      icon: <Monitor className="w-12 h-12" />,
-      gradient: "from-orange-500 via-red-500 to-pink-500",
-      bgGradient: "from-orange-50 via-red-50 to-pink-50",
-      features: ["Teknik Destek", "Donanım Takibi", "Yazılım Kurulumu", "Bakım Planı"],
-      status: "Geliştiriliyor"
-    },
-    {
       id: 4,
       title: "Kişiye Kuruma Özel Yazılımlar",
       description: "Anahtar teslim yazılım hizmeti ile özel ihtiyaçlarınıza uygun çözümler",
       icon: <Zap className="w-12 h-12" />,
-      gradient: "from-indigo-500 via-purple-500 to-pink-500",
-      bgGradient: "from-indigo-50 via-purple-50 to-pink-50",
+      gradient: "from-amber-500 via-yellow-500 to-orange-500",
+      bgGradient: "from-amber-50 via-yellow-50 to-orange-50",
       features: ["Özel Yazılım", "Web Uygulamaları", "Mobil Uygulamalar", "API Geliştirme"],
       status: "Sürekli"
     },
     {
       id: 5,
-      title: "Gayrimenkul Portföy Yönetim Sistemi",
-      description: "Emlak danışmanları için kapsamlı portföy yönetimi ve müşteri takip sistemi",
+      title: "DYNASTY PORT",
+      description: "Türkiye'nin en gelişmiş emlak yazılımı ve gayrimenkul otomasyon sistemi ile portföyünüzü kolayca yönetin",
       icon: <Building2 className="w-12 h-12" />,
-      gradient: "from-emerald-500 via-teal-500 to-cyan-500",
-      bgGradient: "from-emerald-50 via-teal-50 to-cyan-50",
+      gradient: "from-slate-700 via-blue-800 to-indigo-900",
+      bgGradient: "from-slate-50 via-blue-50 to-indigo-50",
       features: [
-        "Portföy Yönetimi",
-        "Müşteri Yönetimi",
-        "Gayrimenkul Listesi",
-        "Randevu Sistemi",
-        "Arama & Filtreleme",
-        "Harita Entegrasyonu",
-        "Raporlama",
-        "Müşteri İletişim Geçmişi"
+        "7 Portföy Tipi",
+        "Muhit Bilgileri",
+        "Müşteri CRM",
+        "Randevu & Bildirim",
+        "Kira Sözleşmesi",
+        "Satış Takibi",
+        "Şube Yönetimi",
+        "Gelen Kutusu",
+        "Dashboard",
+        "Website Entegre",
+        "Danışman Atama",
+        "Otomatik PDF"
       ],
-      status: "Planlanıyor"
-    },
-    {
-      id: 6,
-      title: "Fitness Salon Yönetim Sistemi",
-      description: "Fitness salonları için üye yönetimi, antrenman programları ve ödeme takibi",
-      icon: <Dumbbell className="w-12 h-12" />,
-      gradient: "from-violet-500 via-purple-500 to-indigo-500",
-      bgGradient: "from-violet-50 via-purple-50 to-indigo-50",
-      features: [
-        "Üye Yönetimi",
-        "Üyelik Paketleri",
-        "Antrenman Programları",
-        "Randevu Sistemi",
-        "Ödeme Takibi",
-        "Antrenör Yönetimi",
-        "Egzersiz Kütüphanesi",
-        "Raporlama"
-      ],
-      status: "Geliştiriliyor"
+      status: "Tamamlandı"
     }
   ];
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob animation-delay-4000"></div>
+      <div className="absolute bottom-32 right-1/4 w-72 h-72 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob animation-delay-4000"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -125,17 +91,17 @@ export default function ProjectsSection() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className={`group relative bg-gradient-to-br ${project.bgGradient} rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50 overflow-hidden`}
+              className={`group relative bg-gradient-to-br ${project.bgGradient} rounded-3xl p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50 overflow-hidden flex flex-col h-full`}
             >
               {/* Background Pattern */}
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${project.gradient} rounded-full opacity-10 -translate-y-16 translate-x-16 group-hover:opacity-20 transition-opacity duration-500`}></div>
               <div className={`absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br ${project.gradient} rounded-full opacity-10 translate-y-12 -translate-x-12 group-hover:opacity-20 transition-opacity duration-500`}></div>
               
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col h-full">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient} rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
@@ -152,70 +118,74 @@ export default function ProjectsSection() {
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
-                  {project.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {project.description}
-                </p>
-                
-                {/* Features */}
-                <div className="mb-6">
-                  {project.id === 1 ? (
-                    // Repavent Oto Servis için 3 sütunlu grid
-                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
-                      {project.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-2">
-                          <div className={`w-2 h-2 bg-gradient-to-r ${project.gradient} rounded-full flex-shrink-0`}></div>
-                          <span className="text-gray-700 text-xs leading-tight">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    // Diğer projeler için normal liste
-                    <div className="space-y-3">
-                      {project.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-3">
-                          <div className={`w-2 h-2 bg-gradient-to-r ${project.gradient} rounded-full flex-shrink-0`}></div>
-                          <span className="text-gray-700 text-sm">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                <div className="flex-1 flex flex-col">
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 lg:mb-6 leading-relaxed text-sm lg:text-base">
+                    {project.description}
+                  </p>
+                  
+                  {/* Features */}
+                  <div className="mb-6 flex-1">
+                    {project.id === 1 || project.id === 5 ? (
+                      // Repavent Oto Servis ve DYNASTY PORT için 2-3 sütunlu grid
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {project.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-start space-x-2">
+                            <div className={`w-2 h-2 bg-gradient-to-r ${project.gradient} rounded-full flex-shrink-0 mt-1.5`}></div>
+                            <span className="text-gray-700 text-xs lg:text-sm leading-tight">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      // Diğer projeler için normal liste
+                      <div className="space-y-2 lg:space-y-3">
+                        {project.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center space-x-3">
+                            <div className={`w-2 h-2 bg-gradient-to-r ${project.gradient} rounded-full flex-shrink-0`}></div>
+                            <span className="text-gray-700 text-sm lg:text-base">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
                 
                 {/* Action Button */}
-                <div className="pt-4 flex flex-col sm:flex-row gap-3">
+                <div className="pt-4 mt-auto">
                   {project.id === 1 ? (
-                    // Repavent Oto Servis için iki buton
-                    <>
-                      <a 
-                        href="https://www.repavent.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className={`inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 group-hover:scale-105 cursor-pointer`}
-                      >
-                        Detaylı İncele
-                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                      <button 
-                        onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-                        className={`inline-flex items-center justify-center px-6 py-3 bg-white text-gray-700 border-2 border-gray-300 rounded-xl font-semibold hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 group-hover:scale-105 cursor-pointer`}
-                      >
-                        Detaylı Bilgi Al
-                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    </>
+                    // Repavent Oto Servis için tek buton
+                    <a 
+                      href="https://www.repavent.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer text-sm lg:text-base`}
+                    >
+                      Detaylı İncele
+                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  ) : project.id === 5 ? (
+                    // DYNASTY PORT için tek buton
+                    <a 
+                      href="https://www.dynastyport.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer text-sm lg:text-base`}
+                    >
+                      Detaylı İncele
+                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
                   ) : (
-                    // Diğer projeler için normal buton
+                    // Diğer projeler için iletişim butonu
                     <button 
                       onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-                      className={`inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 group-hover:scale-105 cursor-pointer`}
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer text-sm lg:text-base`}
                     >
                       Detaylı Bilgi Al
                       <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

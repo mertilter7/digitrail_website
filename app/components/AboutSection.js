@@ -1,14 +1,15 @@
 "use client";
 
-import { Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { Users, TrendingUp, CheckCircle, ArrowRight, Code, Smartphone, Target, Building2 } from 'lucide-react';
 
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob animation-delay-4000"></div>
+      <div className="absolute bottom-20 right-32 w-72 h-72 bg-gradient-to-r from-amber-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -80,20 +81,28 @@ export default function AboutSection() {
                 <h3 className="text-2xl font-bold mb-6 text-center">Hizmet Alanlarımız</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-white/10 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">💻</div>
-                    <div className="text-sm">Yazılım Geliştirme</div>
+                    <div className="flex justify-center mb-2">
+                      <Code className="w-8 h-8" />
+                    </div>
+                    <div className="text-sm font-medium">Yazılım Geliştirme</div>
                   </div>
                   <div className="bg-white/10 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">📱</div>
-                    <div className="text-sm">Sosyal Medya</div>
+                    <div className="flex justify-center mb-2">
+                      <Smartphone className="w-8 h-8" />
+                    </div>
+                    <div className="text-sm font-medium">Sosyal Medya</div>
                   </div>
                   <div className="bg-white/10 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">🎯</div>
-                    <div className="text-sm">Dijital Pazarlama</div>
+                    <div className="flex justify-center mb-2">
+                      <Target className="w-8 h-8" />
+                    </div>
+                    <div className="text-sm font-medium">Dijital Pazarlama</div>
                   </div>
                   <div className="bg-white/10 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">🏢</div>
-                    <div className="text-sm">Kurumsal Çözümler</div>
+                    <div className="flex justify-center mb-2">
+                      <Building2 className="w-8 h-8" />
+                    </div>
+                    <div className="text-sm font-medium">Kurumsal Çözümler</div>
                   </div>
                 </div>
               </div>

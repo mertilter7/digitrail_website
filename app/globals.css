@@ -1,5 +1,72 @@
 @import "tailwindcss";
 
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Navbar yüksekliği kadar offset */
+}
+
+/* Prefers reduced motion desteği */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Mobile Menu Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Staggered animation for menu items */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-menu-item {
+  opacity: 0;
+  animation: slideInLeft 0.3s ease-out forwards;
+}
+
+.animate-menu-item:nth-child(1) { animation-delay: 0.05s; }
+.animate-menu-item:nth-child(2) { animation-delay: 0.1s; }
+.animate-menu-item:nth-child(3) { animation-delay: 0.15s; }
+.animate-menu-item:nth-child(4) { animation-delay: 0.2s; }
+.animate-menu-item:nth-child(5) { animation-delay: 0.25s; }
+.animate-menu-item:nth-child(6) { animation-delay: 0.3s; }
+.animate-menu-item:nth-child(7) { animation-delay: 0.35s; }
+
 /* Custom Swiper Styles for React Components */
 .swiper-button-next,
 .swiper-button-prev {
@@ -102,11 +169,14 @@
   0% {
     transform: translate(0px, 0px) scale(1);
   }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
+  25% {
+    transform: translate(80px, -80px) scale(1.15);
   }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
+  50% {
+    transform: translate(-60px, 60px) scale(0.85);
+  }
+  75% {
+    transform: translate(60px, 40px) scale(1.05);
   }
   100% {
     transform: translate(0px, 0px) scale(1);
@@ -114,15 +184,17 @@
 }
 
 .animate-blob {
-  animation: blob 7s infinite;
+  animation: blob 5s ease-in-out infinite;
 }
 
 .animation-delay-2000 {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
+  animation-duration: 6s;
 }
 
 .animation-delay-4000 {
-  animation-delay: 4s;
+  animation-delay: 3s;
+  animation-duration: 7s;
 }
 
 /* Glassmorphism effect */
