@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Star, Zap, Crown, Shield, Users, BarChart3, Wrench, Car, Package, CreditCard, Calendar, MessageCircle, TrendingUp, FileText, Printer } from 'lucide-react';
+import { Check, Star, Crown, MessageCircle } from 'lucide-react';
 
 export default function PricingSection() {
 

@@ -4,10 +4,10 @@ export default function DynastyPricing() {
   const plans = [
     {
       name: "Danışman",
-      description: "1-2 kişilik firma için ideal",
-      setupPrice: 20000,
-      originalSetupPrice: 25000,
-      monthlyMaintenance: 1250,
+      description: "1-3 Danışmanlı Firma için ideal",
+      setupPrice: 25000,
+      originalSetupPrice: 32000,
+      monthlyMaintenance: 1999,
       color: "from-blue-500 to-blue-600",
       features: [
         "Kurumsal Website",
@@ -17,11 +17,16 @@ export default function DynastyPricing() {
         "Güncel ve Modern Teknolojiler",
         "UI/UX Öncelikli Tasarım",
         "Sınırsız İlan",
-        "Portföy Yönetimi (Daire, Villa, Arsa, İşyeri, Müstakil, Yazlık, Araba)",
+        "Portföy Yönetimi (Daire, Villa, Arsa, İşyeri, Müstakil, Yazlık)",
         "Müşteri Yönetimi (ERP)",
         "Randevu Sistemi (Otomatik Bildirim)",
         "Kira Sözleşmeleri (PDF Oluşturma)",
         "Satış Takibi & Raporlama",
+        "Satış Raporları (Aylık, Yıllık Analiz)",
+        "Performans Raporları (Ekip & Hedef Takibi)",
+        "Danışman Profil Sistemi (Kişisel Dashboard)",
+        "Modern Teknolojilerle Donatılmış UI/UX",
+        "Güvenlik & Performans (JWT, Rate Limiting)",
         "Şube Yönetimi (Çoklu Şube)",
         "Not Alma & Hatırlatıcılar",
         "Gelen Kutusu & Talep Yönetimi",
@@ -35,10 +40,10 @@ export default function DynastyPricing() {
     },
     {
       name: "Orta Ölçekli Firma",
-      description: "3-7 kullanıcı için",
-      setupPrice: 45000,
-      originalSetupPrice: 60000,
-      monthlyMaintenance: 2000,
+      description: "3-10 danışmanlı firma için ideal",
+      setupPrice: 50000,
+      originalSetupPrice: 75000,
+      monthlyMaintenance: 2999,
       color: "from-purple-500 to-purple-600",
       features: [
         "Kurumsal Website",
@@ -48,11 +53,16 @@ export default function DynastyPricing() {
         "Güncel ve Modern Teknolojiler",
         "UI/UX Öncelikli Tasarım",
         "Sınırsız İlan",
-        "Portföy Yönetimi (Daire, Villa, Arsa, İşyeri, Müstakil, Yazlık, Araba)",
+        "Portföy Yönetimi (Daire, Villa, Arsa, İşyeri, Müstakil, Yazlık)",
         "Müşteri Yönetimi (ERP)",
         "Randevu Sistemi (Otomatik Bildirim)",
         "Kira Sözleşmeleri (PDF Oluşturma)",
         "Satış Takibi & Raporlama",
+        "Satış Raporları (Aylık, Yıllık Analiz)",
+        "Performans Raporları (Ekip & Hedef Takibi)",
+        "Danışman Profil Sistemi (Kişisel Dashboard)",
+        "Modern Teknolojilerle Donatılmış UI/UX",
+        "Güvenlik & Performans (JWT, Rate Limiting)",
         "Şube Yönetimi (Çoklu Şube)",
         "Not Alma & Hatırlatıcılar",
         "Gelen Kutusu & Talep Yönetimi",
@@ -66,10 +76,10 @@ export default function DynastyPricing() {
     },
     {
       name: "Büyük Firma",
-      description: "7+ kullanıcı için",
-      setupPrice: 75000,
-      originalSetupPrice: 120000,
-      monthlyMaintenance: 2500,
+      description: "10+ danışmanlı firma için ideal",
+      setupPrice: 115000,
+      originalSetupPrice: 150000,
+      monthlyMaintenance: 3499,
       color: "from-orange-500 to-orange-600",
       features: [
         "Kurumsal Website",
@@ -79,11 +89,16 @@ export default function DynastyPricing() {
         "Güncel ve Modern Teknolojiler",
         "UI/UX Öncelikli Tasarım",
         "Sınırsız İlan",
-        "Portföy Yönetimi (Daire, Villa, Arsa, İşyeri, Müstakil, Yazlık, Araba)",
+        "Portföy Yönetimi (Daire, Villa, Arsa, İşyeri, Müstakil, Yazlık)",
         "Müşteri Yönetimi (ERP)",
         "Randevu Sistemi (Otomatik Bildirim)",
         "Kira Sözleşmeleri (PDF Oluşturma)",
         "Satış Takibi & Raporlama",
+        "Satış Raporları (Aylık, Yıllık Analiz)",
+        "Performans Raporları (Ekip & Hedef Takibi)",
+        "Danışman Profil Sistemi (Kişisel Dashboard)",
+        "Modern Teknolojilerle Donatılmış UI/UX",
+        "Güvenlik & Performans (JWT, Rate Limiting)",
         "Şube Yönetimi (Çoklu Şube)",
         "Not Alma & Hatırlatıcılar",
         "Gelen Kutusu & Talep Yönetimi",
@@ -96,7 +111,6 @@ export default function DynastyPricing() {
       popular: false
     }
   ];
-
   return (
     <section id="dynasty-pricing" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -183,7 +197,7 @@ export default function DynastyPricing() {
                     <div className="flex items-center justify-between">
                       <div className="text-left">
                         <div className="text-sm lg:text-base font-bold text-blue-900">
-                          Portföy Website + ERP
+                          Website + ERP
                         </div>
                       </div>
                       <div className="text-right">

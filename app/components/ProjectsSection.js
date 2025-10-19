@@ -48,7 +48,7 @@ export default function ProjectsSection() {
       gradient: "from-slate-700 via-blue-800 to-indigo-900",
       bgGradient: "from-slate-50 via-blue-50 to-indigo-50",
       features: [
-        "7 Portföy Tipi",
+        "6 Portföy Tipi",
         "Muhit Bilgileri",
         "Müşteri CRM",
         "Randevu & Bildirim",
@@ -59,7 +59,7 @@ export default function ProjectsSection() {
         "Dashboard",
         "Website Entegre",
         "Danışman Atama",
-        "Otomatik PDF"
+        "Satış Modülü",
       ],
       status: "Tamamlandı"
     }
