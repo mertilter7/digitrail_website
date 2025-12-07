@@ -1,6 +1,6 @@
 "use client";
 
-import { Code, Car, Smartphone, Zap, Building2, Dumbbell, GraduationCap, Sparkles } from 'lucide-react';
+import { Code, Car, Zap, Building2, Dumbbell, GraduationCap, Sparkles } from 'lucide-react';
 
 export default function ProjectsSection() {
   const projects = [
@@ -75,27 +75,31 @@ export default function ProjectsSection() {
       title: "Kişiye Kuruma Özel Yazılımlar",
       description: "Anahtar teslim yazılım hizmeti ile özel ihtiyaçlarınıza uygun çözümler",
       icon: <Zap className="w-12 h-12" />,
-      gradient: "from-indigo-500 via-purple-500 to-pink-500",
-      bgGradient: "from-indigo-50 via-purple-50 to-pink-50",
+      gradient: "from-amber-500 via-yellow-500 to-orange-500",
+      bgGradient: "from-amber-50 via-yellow-50 to-orange-50",
       features: ["Özel Yazılım", "Web Uygulamaları", "Mobil Uygulamalar", "API Geliştirme"],
       status: "Sürekli"
     },
     {
       id: 5,
-      title: "Gayrimenkul Portföy Yönetim Sistemi",
-      description: "Emlak danışmanları için kapsamlı portföy yönetimi ve müşteri takip sistemi",
+      title: "DYNASTY PORT",
+      description: "Türkiye'nin en gelişmiş emlak yazılımı ve gayrimenkul otomasyon sistemi ile portföyünüzü kolayca yönetin",
       icon: <Building2 className="w-12 h-12" />,
-      gradient: "from-emerald-500 via-teal-500 to-cyan-500",
-      bgGradient: "from-emerald-50 via-teal-50 to-cyan-50",
+      gradient: "from-slate-700 via-blue-800 to-indigo-900",
+      bgGradient: "from-slate-50 via-blue-50 to-indigo-50",
       features: [
-        "Portföy Yönetimi",
-        "Müşteri Yönetimi",
-        "Gayrimenkul Listesi",
-        "Randevu Sistemi",
-        "Arama & Filtreleme",
-        "Harita Entegrasyonu",
-        "Raporlama",
-        "Müşteri İletişim Geçmişi"
+        "6 Portföy Tipi",
+        "Muhit Bilgileri",
+        "Müşteri CRM",
+        "Randevu & Bildirim",
+        "Kira Sözleşmesi",
+        "Satış Takibi",
+        "Şube Yönetimi",
+        "Gelen Kutusu",
+        "Dashboard",
+        "Website Entegre",
+        "Danışman Atama",
+        "Satış Modülü",
       ],
       status: "Tamamlandı"
     },
@@ -182,8 +186,8 @@ export default function ProjectsSection() {
                 
                 {/* Features */}
                 <div className="mb-6">
-                  {project.id === 1 || project.id === 2 || project.id === 3 ? (
-                    // Repavent Oto Servis, SOLOCADEMIA ve Car Detailing için 3 sütunlu grid
+                  {project.id === 1 || project.id === 2 || project.id === 3 || project.id === 5 ? (
+                    // Repavent Oto Servis, SOLOCADEMIA, Car Detailing ve DYNASTY PORT için 3 sütunlu grid
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
                       {project.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-2">
@@ -232,7 +236,7 @@ export default function ProjectsSection() {
                       </button>
                     </>
                   ) : project.id === 5 ? (
-                    // Gayrimenkul Portföy Yönetim Sistemi için iki buton
+                    // DYNASTY PORT için iki buton
                     <>
                       <a 
                         href="https://www.dynastyport.com" 
@@ -308,4 +312,4 @@ export default function ProjectsSection() {
       </div>
     </section>
   );
-} 
+}

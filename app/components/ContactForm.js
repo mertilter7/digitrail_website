@@ -93,7 +93,7 @@ export default function ContactForm() {
             İletişime Geçin
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            DigiTrail hakkında bilgi almak veya hizmet talep etmek için iletişime geçin.
+            Digitrail hakkında bilgi almak veya hizmet talep etmek için iletişime geçin.
           </p>
         </div>
         

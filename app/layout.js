@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "DigiTrail - Digital Solutions",
+  title: "Digitrail - Digital Solutions",
   description: "Professional digital solutions and web development services",
 };
 
