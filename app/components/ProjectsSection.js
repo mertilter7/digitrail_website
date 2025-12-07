@@ -1,6 +1,6 @@
 "use client";
 
-import { Code, Car, Smartphone, Monitor, Zap, Building2, Dumbbell } from 'lucide-react';
+import { Code, Car, Smartphone, Zap, Building2, Dumbbell, GraduationCap, Sparkles } from 'lucide-react';
 
 export default function ProjectsSection() {
   const projects = [
@@ -32,23 +32,43 @@ export default function ProjectsSection() {
     },
     {
       id: 2,
-      title: "Repavent Telefon Servis",
-      description: "Telefon servis yönetim platformu ile cihaz takibi ve müşteri iletişimi",
-      icon: <Smartphone className="w-12 h-12" />,
+      title: "SOLOCADEMIA",
+      description: "Özel ders veren eğitimciler için geliştirilmiş kapsamlı yönetim sistemi. Hem website tanıtım sayfası hem de yönetim panelini içinde barındıran proje.",
+      icon: <GraduationCap className="w-12 h-12" />,
       gradient: "from-green-500 via-emerald-500 to-teal-500",
       bgGradient: "from-green-50 via-emerald-50 to-teal-50",
-      features: ["Cihaz Takibi", "Servis Durumu", "Müşteri Bildirimleri", "Parça Yönetimi"],
-      status: "Geliştiriliyor"
+      features: [
+        "Öğrenci Kaydı",
+        "Öğrenci İşlem Kaydı",
+        "Ders Takvimi",
+        "Raporlar Dashboard",
+        "Gelir Takibi Modülü",
+        "Gider Takibi Modülü",
+        "Bilanço Finans Modülü",
+        "Gelen Kutusu",
+        "Detaylı Dashboard Raporları"
+      ],
+      status: "Tamamlandı"
     },
     {
       id: 3,
-      title: "Repavent Bilgisayar Servis",
-      description: "Bilgisayar servis yönetim sistemi ile teknik destek ve donanım takibi",
-      icon: <Monitor className="w-12 h-12" />,
+      title: "Car Detailing & Car Wash",
+      description: "Car Detailing & Car Wash alanında hizmet veren kişi veya kurumlar için modern güncel teknolojiler ile donatılmış kullanım kolaylığı ve tanıtım websitesi tarafında SEO ve modern tasarım kurallarına göre oluşan proje.",
+      icon: <Sparkles className="w-12 h-12" />,
       gradient: "from-orange-500 via-red-500 to-pink-500",
       bgGradient: "from-orange-50 via-red-50 to-pink-50",
-      features: ["Teknik Destek", "Donanım Takibi", "Yazılım Kurulumu", "Bakım Planı"],
-      status: "Geliştiriliyor"
+      features: [
+        "Müşteri Kayıt Modülü",
+        "Anlaşmalar Modülü",
+        "Detaylı İşlem Kaydı Modülü",
+        "Randevu Modülü",
+        "Gelen Kutusu Modülü",
+        "Gelir Takibi Modülü",
+        "Gider Modülü",
+        "Bilanço Modülü",
+        "Dashboard Rapor Ekranı"
+      ],
+      status: "Tamamlandı"
     },
     {
       id: 4,
@@ -77,7 +97,7 @@ export default function ProjectsSection() {
         "Raporlama",
         "Müşteri İletişim Geçmişi"
       ],
-      status: "Planlanıyor"
+      status: "Tamamlandı"
     },
     {
       id: 6,
@@ -96,7 +116,7 @@ export default function ProjectsSection() {
         "Egzersiz Kütüphanesi",
         "Raporlama"
       ],
-      status: "Geliştiriliyor"
+      status: "Planlanıyor"
     }
   ];
 
@@ -162,8 +182,8 @@ export default function ProjectsSection() {
                 
                 {/* Features */}
                 <div className="mb-6">
-                  {project.id === 1 ? (
-                    // Repavent Oto Servis için 3 sütunlu grid
+                  {project.id === 1 || project.id === 2 || project.id === 3 ? (
+                    // Repavent Oto Servis, SOLOCADEMIA ve Car Detailing için 3 sütunlu grid
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
                       {project.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-2">
@@ -197,6 +217,30 @@ export default function ProjectsSection() {
                         className={`inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 group-hover:scale-105 cursor-pointer`}
                       >
                         Detaylı İncele
+                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                      <button 
+                        onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+                        className={`inline-flex items-center justify-center px-6 py-3 bg-white text-gray-700 border-2 border-gray-300 rounded-xl font-semibold hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 group-hover:scale-105 cursor-pointer`}
+                      >
+                        Detaylı Bilgi Al
+                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </>
+                  ) : project.id === 5 ? (
+                    // Gayrimenkul Portföy Yönetim Sistemi için iki buton
+                    <>
+                      <a 
+                        href="https://www.dynastyport.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 group-hover:scale-105 cursor-pointer`}
+                      >
+                        Ziyaret Et
                         <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>

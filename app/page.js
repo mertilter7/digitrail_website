@@ -218,7 +218,9 @@ export default function Home() {
       <ProjectsSection />
 
       {/* Pricing Section - Repavent Oto Servis */}
-      <PricingSection />
+      <div className="hidden">
+        <PricingSection />
+      </div>
 
       {/* Partnership Section - Bayilik & Partnerlik */}
       <PartnershipSection />
