@@ -150,7 +150,7 @@ export default function ProjectsSection() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-          {projects.map((project, index) => (
+          {projects.filter(project => project.id !== 1 && project.id !== 6).map((project, index) => (
             <div 
               key={project.id}
               className={`group relative bg-gradient-to-br ${project.bgGradient} rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50 overflow-hidden`}
@@ -186,8 +186,8 @@ export default function ProjectsSection() {
                 
                 {/* Features */}
                 <div className="mb-6">
-                  {project.id === 1 || project.id === 2 || project.id === 3 || project.id === 5 ? (
-                    // Repavent Oto Servis, SOLOCADEMIA, Car Detailing ve DYNASTY PORT için 3 sütunlu grid
+                  {project.id === 2 || project.id === 3 || project.id === 5 ? (
+                    // SOLOCADEMIA, Car Detailing ve DYNASTY PORT için 3 sütunlu grid
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
                       {project.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-2">
@@ -211,31 +211,7 @@ export default function ProjectsSection() {
                 
                 {/* Action Button */}
                 <div className="pt-4 flex flex-col sm:flex-row gap-3">
-                  {project.id === 1 ? (
-                    // Repavent Oto Servis için iki buton
-                    <>
-                      <a 
-                        href="https://www.repavent.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className={`inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 group-hover:scale-105 cursor-pointer`}
-                      >
-                        Detaylı İncele
-                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                      <button 
-                        onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-                        className={`inline-flex items-center justify-center px-6 py-3 bg-white text-gray-700 border-2 border-gray-300 rounded-xl font-semibold hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 group-hover:scale-105 cursor-pointer`}
-                      >
-                        Detaylı Bilgi Al
-                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    </>
-                  ) : project.id === 5 ? (
+                  {project.id === 5 ? (
                     // DYNASTY PORT için iki buton
                     <>
                       <a 
