@@ -44,7 +44,7 @@ export default function PartnershipSection() {
         "Satış sonrası destek"
       ],
       color: "from-blue-600 to-indigo-600",
-      bgColor: "from-blue-50 to-indigo-50"
+      bgColor: "from-slate-950/70 to-slate-900/60"
     },
     {
       type: "Partnerlik",
@@ -59,7 +59,7 @@ export default function PartnershipSection() {
         "Uzun vadeli işbirliği"
       ],
       color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-50 to-pink-50"
+      bgColor: "from-slate-950/70 to-slate-900/60"
     },
     {
       type: "Satış Ortaklığı",
@@ -74,7 +74,7 @@ export default function PartnershipSection() {
         "Sürekli destek"
       ],
       color: "from-green-600 to-emerald-600",
-      bgColor: "from-green-50 to-emerald-50"
+      bgColor: "from-slate-950/70 to-slate-900/60"
     }
   ];
 
@@ -88,7 +88,7 @@ export default function PartnershipSection() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div data-aos="fade-up" className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium mb-6">
             <Handshake className="w-4 h-4 mr-2" />
             İş Ortaklığı
@@ -106,7 +106,7 @@ export default function PartnershipSection() {
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+            <div key={index} data-aos="fade-up" data-aos-delay={index * 80} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
               <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                 {benefit.icon}
               </div>
@@ -121,6 +121,8 @@ export default function PartnershipSection() {
           {partnershipTypes.map((partnership, index) => (
             <div 
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               className={`bg-gradient-to-br ${partnership.bgColor} rounded-3xl p-8 shadow-2xl border border-white/20 relative overflow-hidden group hover:shadow-3xl transition-all duration-500`}
             >
               {/* Background Pattern */}
@@ -132,8 +134,8 @@ export default function PartnershipSection() {
                   <div className={`w-20 h-20 bg-gradient-to-r ${partnership.color} rounded-2xl flex items-center justify-center text-white shadow-lg mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                     {partnership.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{partnership.type}</h3>
-                  <p className="text-gray-600 leading-relaxed">{partnership.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{partnership.type}</h3>
+                  <p className="text-slate-300 leading-relaxed">{partnership.description}</p>
                 </div>
                 
                 {/* Features */}
@@ -141,7 +143,7 @@ export default function PartnershipSection() {
                   {partnership.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
                       <div className={`w-2 h-2 bg-gradient-to-r ${partnership.color} rounded-full flex-shrink-0`}></div>
-                      <span className="text-gray-700 text-sm">{feature}</span>
+                      <span className="text-slate-200 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -162,7 +164,7 @@ export default function PartnershipSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
+        <div data-aos="zoom-in-up" className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
             <h3 className="text-3xl font-bold text-white mb-4">
               Hemen Ortak Olun

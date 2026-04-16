@@ -4,24 +4,24 @@ import { Users, TrendingUp, CheckCircle, ArrowRight, Code, Smartphone, Target, B
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50 relative overflow-hidden">
+    <section id="about" className="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob"></div>
-      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob animation-delay-4000"></div>
-      <div className="absolute bottom-20 right-32 w-72 h-72 bg-gradient-to-r from-amber-300 to-yellow-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-400 rounded-full mix-blend-screen filter blur-2xl opacity-10 md:opacity-25 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-400 rounded-full mix-blend-screen filter blur-2xl opacity-10 md:opacity-25 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-400 rounded-full mix-blend-screen filter blur-2xl opacity-10 md:opacity-25 animate-blob animation-delay-4000"></div>
+      <div className="absolute bottom-20 right-32 w-72 h-72 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full mix-blend-screen filter blur-2xl opacity-10 md:opacity-25 animate-blob"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div data-aos="fade-up" className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium mb-6">
             <Users className="w-4 h-4 mr-2" />
             Hakkımızda
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Güvenilir Teknoloji
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Partneriniz</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
             Digitrail olarak 7 yıldır profesyonel sektör deneyimi ile büyük ölçekli banka, kurum, 
             kuruluş ve özel şirketlerin yazılım projelerini hayata geçiriyoruz.
           </p>
@@ -30,8 +30,8 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Side - Company Story */}
           <div className="space-y-8">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <div data-aos="fade-right" className="bg-slate-950/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center text-white mr-3">
                   <TrendingUp className="w-6 h-6" />
                 </div>
@@ -43,8 +43,8 @@ export default function AboutSection() {
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">7 Yıllık Sektör Deneyimi</h4>
-                    <p className="text-gray-600 text-sm">Bankacılık, finans ve kurumsal yazılım projelerinde uzmanlaşmış ekibimiz</p>
+                    <h4 className="font-semibold text-white">7 Yıllık Sektör Deneyimi</h4>
+                    <p className="text-slate-300 text-sm">Bankacılık, finans ve kurumsal yazılım projelerinde uzmanlaşmış ekibimiz</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -52,8 +52,8 @@ export default function AboutSection() {
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Büyük Ölçekli Projeler</h4>
-                    <p className="text-gray-600 text-sm">Banka, kurum ve kuruluşların karmaşık yazılım ihtiyaçlarını karşılıyoruz</p>
+                    <h4 className="font-semibold text-white">Büyük Ölçekli Projeler</h4>
+                    <p className="text-slate-300 text-sm">Banka, kurum ve kuruluşların karmaşık yazılım ihtiyaçlarını karşılıyoruz</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -61,8 +61,8 @@ export default function AboutSection() {
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Kapsamlı Hizmet Yelpazesi</h4>
-                    <p className="text-gray-600 text-sm">Yazılım geliştirmeden sosyal medya yönetimine kadar tüm dijital ihtiyaçlar</p>
+                    <h4 className="font-semibold text-white">Kapsamlı Hizmet Yelpazesi</h4>
+                    <p className="text-slate-300 text-sm">Yazılım geliştirmeden sosyal medya yönetimine kadar tüm dijital ihtiyaçlar</p>
                   </div>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export default function AboutSection() {
           {/* Right Side - Services & Stats */}
           <div className="space-y-6">
             {/* Services Overview */}
-            <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
+            <div data-aos="fade-left" className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
@@ -109,24 +109,24 @@ export default function AboutSection() {
             </div>
 
             {/* Company Stats */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Rakamlarla Digitrail</h3>
+            <div data-aos="fade-left" data-aos-delay="120" className="bg-slate-950/50 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 text-center">Rakamlarla Digitrail</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-600 mb-1">7+</div>
-                  <div className="text-sm text-gray-600">Yıl Deneyim</div>
+                  <div className="text-sm text-slate-300">Yıl Deneyim</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-600 mb-1">100+</div>
-                  <div className="text-sm text-gray-600">Tamamlanan Proje</div>
+                  <div className="text-sm text-slate-300">Tamamlanan Proje</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-indigo-600 mb-1">50+</div>
-                  <div className="text-sm text-gray-600">Mutlu Müşteri</div>
+                  <div className="text-sm text-slate-300">Mutlu Müşteri</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-600 mb-1">24/7</div>
-                  <div className="text-sm text-gray-600">Destek</div>
+                  <div className="text-sm text-slate-300">Destek</div>
                 </div>
               </div>
             </div>
@@ -134,11 +134,11 @@ export default function AboutSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">
+        <div data-aos="zoom-in-up" className="text-center">
+          <h3 className="text-3xl font-bold text-white mb-6">
             Projelerinizi Hayata Geçirelim
           </h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Deneyimli ekibimiz ile yazılım projelerinizi, sosyal medya yönetiminizi ve 
             dijital pazarlama ihtiyaçlarınızı profesyonel bir şekilde karşılayalım.
           </p>
@@ -154,7 +154,7 @@ export default function AboutSection() {
             </a>
             <button 
               onClick={() => document.getElementById('solutions').scrollIntoView({ behavior: 'smooth' })}
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 cursor-pointer"
+              className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-xl font-semibold hover:bg-blue-500/15 hover:border-blue-300 hover:text-white transition-all duration-200 cursor-pointer"
             >
               Çözümlerimizi İncele
             </button>

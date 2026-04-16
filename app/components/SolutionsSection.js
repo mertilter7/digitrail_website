@@ -107,31 +107,31 @@ export default function SolutionsSection() {
   ];
 
   return (
-    <section id="solutions" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section id="solutions" className="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob"></div>
-      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 md:opacity-40 animate-blob animation-delay-4000"></div>
-      <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-amber-300 to-orange-300 rounded-full mix-blend-multiply filter blur-2xl opacity-15 md:opacity-35 animate-blob animation-delay-2000"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-400 rounded-full mix-blend-screen filter blur-2xl opacity-10 md:opacity-25 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-400 rounded-full mix-blend-screen filter blur-2xl opacity-10 md:opacity-25 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-400 rounded-full mix-blend-screen filter blur-2xl opacity-10 md:opacity-25 animate-blob animation-delay-4000"></div>
+      <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full mix-blend-screen filter blur-2xl opacity-10 md:opacity-20 animate-blob animation-delay-2000"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div data-aos="fade-up" className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium mb-6">
             <Code className="w-4 h-4 mr-2" />
             Çözümlerimiz
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Kapsamlı Dijital
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Hizmetlerimiz</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             İşletmenizin dijital dönüşümü için ihtiyaç duyduğunuz tüm hizmetleri tek platformda sunuyoruz. 
             Modern teknolojiler ve yaratıcı tasarımlarla markanızı öne çıkarıyoruz.
           </p>
         </div>
 
         {/* Solutions Slider */}
-        <div className="relative">
+        <div data-aos="zoom-in-up" className="relative">
           <Swiper
             ref={swiperRef}
             modules={[Navigation, Pagination, Autoplay, EffectFade]}
@@ -166,10 +166,10 @@ export default function SolutionsSection() {
           >
             {solutions.map((solution, index) => (
               <SwiperSlide key={solution.id}>
-                <div className={`bg-gradient-to-br ${solution.bgColor} rounded-3xl p-8 md:p-12 shadow-2xl border border-white/20 relative overflow-hidden`}>
+                <div className="bg-slate-950/45 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10 relative overflow-hidden">
                   {/* Background Pattern */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${solution.color} rounded-full opacity-10 -translate-y-16 translate-x-16"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br ${solution.color} rounded-full opacity-10 translate-y-12 -translate-x-12"></div>
+                  <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${solution.color} rounded-full opacity-10 -translate-y-16 translate-x-16`}></div>
+                  <div className={`absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br ${solution.color} rounded-full opacity-10 translate-y-12 -translate-x-12`}></div>
                   
                   <div className="relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -180,12 +180,12 @@ export default function SolutionsSection() {
                             {solution.icon}
                           </div>
                           <div>
-                            <h3 className="text-3xl font-bold text-gray-900 mt-3.5 lg:mt-0">{solution.title}</h3>
-                            <p className="text-lg text-gray-600">{solution.subtitle}</p>
+                            <h3 className="text-3xl font-bold text-white mt-3.5 lg:mt-0">{solution.title}</h3>
+                            <p className="text-lg text-slate-300">{solution.subtitle}</p>
                           </div>
                         </div>
                         
-                        <p className="text-lg text-gray-700 leading-relaxed">
+                        <p className="text-lg text-slate-200 leading-relaxed">
                           {solution.description}
                         </p>
                         
@@ -195,7 +195,7 @@ export default function SolutionsSection() {
                               <div className={`w-5 h-5 bg-gradient-to-r ${solution.color} rounded-full flex items-center justify-center flex-shrink-0`}>
                                 <CheckCircle className="w-3 h-3 text-white" />
                               </div>
-                              <span className="text-gray-700 text-sm">{feature}</span>
+                              <span className="text-slate-200 text-sm">{feature}</span>
                             </div>
                           ))}
                         </div>
@@ -240,16 +240,16 @@ export default function SolutionsSection() {
           </Swiper>
           
           {/* Custom Navigation Buttons */}
-          <div className="swiper-button-prev !w-12 !h-12 !bg-white/80 backdrop-blur-sm !rounded-full !text-gray-700 hover:!bg-white transition-all duration-200 shadow-lg border border-white/20"></div>
-          <div className="swiper-button-next !w-12 !h-12 !bg-white/80 backdrop-blur-sm !rounded-full !text-gray-700 hover:!bg-white transition-all duration-200 shadow-lg border border-white/20"></div>
+          <div className="swiper-button-prev !w-12 !h-12 !bg-slate-950/70 backdrop-blur-sm !rounded-full !text-slate-200 hover:!bg-slate-950 transition-all duration-200 shadow-lg border border-white/10"></div>
+          <div className="swiper-button-next !w-12 !h-12 !bg-slate-950/70 backdrop-blur-sm !rounded-full !text-slate-200 hover:!bg-slate-950 transition-all duration-200 shadow-lg border border-white/10"></div>
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">
+        <div data-aos="fade-up" className="text-center mt-16">
+          <h3 className="text-3xl font-bold text-white mb-6">
             Projelerinizi Hayata Geçirelim
           </h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Hangi alanda hizmet almak istiyorsunuz? Uzman ekibimiz ile detaylı bilgi alın ve 
             projelerinizi birlikte planlayalım.
           </p>
@@ -265,7 +265,7 @@ export default function SolutionsSection() {
               href="https://wa.me/905455620432" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200"
+              className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-xl font-semibold hover:bg-blue-500/15 hover:text-white transition-all duration-200"
             >
               İletişime Geç
             </a>

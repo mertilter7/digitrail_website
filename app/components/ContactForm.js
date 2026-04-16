@@ -86,18 +86,18 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div data-aos="fade-up" className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
             İletişime Geçin
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             Digitrail hakkında bilgi almak veya hizmet talep etmek için iletişime geçin.
           </p>
         </div>
         
-        <div className="bg-white rounded-2xl shadow-xl p-8">
+        <div data-aos="zoom-in-up" className="bg-slate-950/55 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/10">
           {/* Başarı/Hata Mesajları */}
           {submitStatus === 'success' && (
             <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
@@ -115,7 +115,7 @@ export default function ContactForm() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Ad */}
               <div>
-                <label htmlFor="firstName" className="block flex-items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="firstName" className="block flex-items-center gap-2 text-sm font-medium text-slate-200 mb-2">
                   <User className="w-4 h-4 inline mr-2" />
                   Ad *
                 </label>
@@ -126,14 +126,14 @@ export default function ContactForm() {
                   value={formData.firstName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 border border-white/10 bg-slate-950/40 text-slate-100 rounded-lg placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   placeholder="Adınızı giriniz"
                 />
               </div>
 
               {/* Soyad */}
               <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="lastName" className="block text-sm font-medium text-slate-200 mb-2">
                   <User className="w-4 h-4 inline mr-2" />
                   Soyad *
                 </label>
@@ -144,14 +144,14 @@ export default function ContactForm() {
                   value={formData.lastName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 border border-white/10 bg-slate-950/40 text-slate-100 rounded-lg placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   placeholder="Soyadınızı giriniz"
                 />
               </div>
 
               {/* E-posta */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-200 mb-2">
                   <MessageSquare className="w-4 h-4 inline mr-2" />
                   E-posta *
                 </label>
@@ -162,14 +162,14 @@ export default function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 border border-white/10 bg-slate-950/40 text-slate-100 rounded-lg placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   placeholder="ornek@email.com"
                 />
               </div>
 
               {/* Telefon */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-medium text-slate-200 mb-2">
                   <MessageSquare className="w-4 h-4 inline mr-2" />
                   Telefon
                 </label>
@@ -179,14 +179,14 @@ export default function ContactForm() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 border border-white/10 bg-slate-950/40 text-slate-100 rounded-lg placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   placeholder="0555 123 45 67"
                 />
               </div>
 
               {/* Şirket */}
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-slate-200 mb-2">
                   <User className="w-4 h-4 inline mr-2" />
                   Şirket Adı
                 </label>
@@ -196,14 +196,14 @@ export default function ContactForm() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 border border-white/10 bg-slate-950/40 text-slate-100 rounded-lg placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   placeholder="Şirket adınızı giriniz"
                 />
               </div>
 
               {/* Paket Seçimi */}
               <div>
-                <label htmlFor="package" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="package" className="block text-sm font-medium text-slate-200 mb-2">
                   <Package className="w-4 h-4 inline mr-2" />
                   İlgilendiğiniz Paket
                 </label>
@@ -212,7 +212,7 @@ export default function ContactForm() {
                   name="package"
                   value={formData.package}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 border border-white/10 bg-slate-950/40 text-slate-100 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 >
                   {packages.map((pkg, index) => (
                     <option key={index} value={pkg.value}>
@@ -225,7 +225,7 @@ export default function ContactForm() {
 
             {/* Açıklama */}
             <div>
-              <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="description" className="block text-sm font-medium text-slate-200 mb-2">
                 <MessageSquare className="w-4 h-4 inline mr-2" />
                 Mesajınız / Açıklama *
               </label>
@@ -236,7 +236,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                className="w-full px-4 py-3 border border-white/10 bg-slate-950/40 text-slate-100 rounded-lg placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
                 placeholder="Mesajınızı veya sorularınızı buraya yazabilirsiniz..."
               ></textarea>
             </div>
@@ -270,28 +270,28 @@ export default function ContactForm() {
 
         {/* İletişim Bilgileri */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="bg-white rounded-lg p-6 shadow-lg">
+          <div data-aos="fade-up" data-aos-delay="80" className="bg-slate-950/55 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/10">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <MessageSquare className="w-6 h-6 text-white" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">E-posta</h3>
-            <p className="text-gray-600">info@digitrailagency.com</p>
+            <h3 className="font-semibold text-white mb-2">E-posta</h3>
+            <p className="text-slate-300">info@digitrailagency.com</p>
           </div>
           
-          <div className="bg-white rounded-lg p-6 shadow-lg">
+          <div data-aos="fade-up" data-aos-delay="140" className="bg-slate-950/55 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/10">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <MessageSquare className="w-6 h-6 text-white" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Telefon</h3>
-            <p className="text-gray-600">+90 545 562 04 32</p>
+            <h3 className="font-semibold text-white mb-2">Telefon</h3>
+            <p className="text-slate-300">+90 545 562 04 32</p>
           </div>
           
-          <div className="bg-white rounded-lg p-6 shadow-lg">
+          <div data-aos="fade-up" data-aos-delay="200" className="bg-slate-950/55 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/10">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <MessageSquare className="w-6 h-6 text-white" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Adres</h3>
-            <p className="text-gray-600">Ankara, Türkiye</p>
+            <h3 className="font-semibold text-white mb-2">Adres</h3>
+            <p className="text-slate-300">Ankara, Türkiye</p>
           </div>
         </div>
       </div>
